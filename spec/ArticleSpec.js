@@ -1,7 +1,7 @@
 describe('Article', function() {
     articleData = {
-        title: "Google to European commission: Android is key to mobile competition",
-        url: "https://www.theguardian.com/technology/2016/nov/10/google-european-commission-android"
+        title: "Brian Lara: The biggest test of all – archive",
+        url: "https://www.theguardian.com/sport/2016/jul/08/brian-lara-cricket-west-indies-test-1994"
     };
 
     it('can be created with a text and url', function() {
