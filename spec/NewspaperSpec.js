@@ -8,10 +8,23 @@ describe('Newspaper', function() {
     };
 
     it('can be created', function() {
-        // article1 = new Article(articleData.title1, articleData.url1);
-        // article2 = new Article(articleData.title2, articleData.url2);
-        newspaper = new Newspaper();
+        let newspaper = new Newspaper();
         expect(newspaper instanceof Newspaper).toEqual(true);
+    });
+
+    it('#addArticle', function() {
+        article1 = new Article(articleData.title1, articleData.url1);
+        let newspaper = new Newspaper();
+        newspaper.addArticle(article1);
+        expect(newspaper.articles[0]).toEqual(article1);
+    });
+
+    it('#addArticles', function() {
+        let article1 = new Article(articleData.title1, articleData.url1);
+        let article2 = new Article(articleData.title2, articleData.url2);
+        let newspaper = new Newspaper();
+        newspaper.addArticles([ article1, article2 ]);
+        expect(newspaper.articles).toEqual([ article1, article2 ]);
     });
 
 });
